@@ -1,8 +1,9 @@
 # Forklift detection: Internship October 2019 / April 2020
 
 This repo contains the web app that was developed for the forklift detection project based on [YOLOv3](https://pjreddie.com/darknet/yolo/) computer vision algorithm. It includes two different tasks:  
-    - Video processing using a model we trained ourselves to detect forklifts.  
-    - Streaming processing to detect cars and people using YOLO.
+
+    - Video processing using a model we trained ourselves to detect forklifts
+    - Streaming processing to detect cars and people using YOLO
     
 ## Repo structure
 + [templates]: HTML document
@@ -20,7 +21,6 @@ YOLO model was employed following this [blog](https://blog.insightdatascience.co
 For the project python was used installing the suggested requirements as indicated in the instructions.
 
 To speed up detections, we counted on **GPU NVIDIA Tesla P40** support. For video processing GPU may not be needed but for streaming processing it is necessary, otherwise it would not work properly. 
-
 
 ### Description
 
@@ -42,8 +42,15 @@ The cameras we worked with are from [skylinewebcams](https://www.skylinewebcams.
 
 The website does not offer an API. But studying its behaviour the links to get the M3U8 files were found, and since these files are clear, we had all that was needed to be able to work with the platform cameras.
 
-![Flow diagram](/flow_diagram.png)
+<img src="/flow_diagram.png" width="600">
 
 In the diagram, it can be seen the idea of how videos are accesed. It is important to take in count that the length of them all is always 8 seconds, which is the time available to retrieve one, process it with YOLO and load it to the buffer of the web app. This is why a GPU is required. Also subsampling and downsizing was performed in order to append the videos to the buffer as quick as possible.
 
-Nonetheless
+Nonetheless 
+
+## Acknowledgements
+Many thanks to our tutors Emilio Martin Gallardo and Hind Azegrouz that guided us during the project
+
+## Authors
+Alejandro Torrado
+Javier Esteban Quiles
