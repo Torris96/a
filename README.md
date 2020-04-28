@@ -46,11 +46,11 @@ The website does not offer an API. But studying its behaviour the links to get t
 
 In the diagram, it can be seen the idea of how videos are accesed. It is important to take in count that the length of them all is always 8 seconds, which is the time available to retrieve one, process it with YOLO and load it to the buffer of the web app. This is why a GPU is required. Also subsampling and downsizing was performed in order to append the videos to the buffer as quick as possible.
 
-Nonetheless 
+Last but not least, it is worth mentioning that we had problems to find the right codec for the streaming videos. To solve this issue a conversion of format is made before a video is appended to the buffer. This is the reason why ffmpeg is used.
 
 ## Acknowledgements
-Many thanks to our tutors Emilio Martin Gallardo and Hind Azegrouz that guided us during the project
+Many thanks to our tutors Hind Azegrouz and Emilio Martin Gallardo that guided us during the project
 
 ## Authors
-Alejandro Torrado
+Alejandro Torrado  
 Javier Esteban Quiles
